@@ -23,7 +23,6 @@ function App() {
       <div className="app">
         <Navbar2 />
         <main className="content">
-          <Section/>
           <Routes>
             <Route path="/" element={<Section />} />
             <Route path="/services" element={<ServicesSection setActiveComponent={setActiveComponent} />} />
