@@ -77,7 +77,8 @@
   }
   .team-item:hover {
     background-color: #088ADB;
-    color: #ffffff;
+    color: #0a0e1a;
+    font-weight: 600;
   }
 .team-item {
     background-color: transparent;
@@ -87,8 +88,9 @@
     border-radius: 15px;
     width: 700px; /* Updated width */
     text-align: left;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
     margin: 10px auto; /* Centers the item horizontally */
+    cursor: pointer;
   }
     
   .equipes-header {

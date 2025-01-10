@@ -8,7 +8,7 @@ import Navbar2 from "./ESL/Components/Navbar2";
 import Section from "./ESL/Components/Section";
 import Equipes from "./ESL/Components/Equipes";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";  // Use BrowserRouter here
+import { Routes, Route, BrowserRouter as Router, Navigate } from "react-router-dom";  // Use BrowserRouter here
 
 import ProjectManagement from "./ESL/Components/ProjectManagement";
 import Faq from "./ESL/Components/Faq";
@@ -23,7 +23,6 @@ function App() {
       <div className="app">
         <Navbar2 />
         <main className="content">
-          <Section/>
           <Routes>
             <Route path="/" element={<Section />} />
             <Route path="/services" element={<ServicesSection setActiveComponent={setActiveComponent} />} />
@@ -34,6 +33,7 @@ function App() {
             <Route path="/FAQ" element={<Faq />} />
             <Route path="/BoiteMessage" element={<BoiteMessage />} />
             <Route path="/Guide" element={<Guide />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
         <Footer />
