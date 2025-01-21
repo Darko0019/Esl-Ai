@@ -1,19 +1,19 @@
 import React from "react";
-import ServicesSection from "./ESL/Components/ServicesSection";
+import ServicesSection from "./Components/ServicesSection";
 import "./App.css";
-import ContactForm from "./ESL/Components/ContactForm";
-import Testimonials from "./ESL/Components/Testimonials";
-import Footer from "./ESL/Components/Footer";
-import Navbar2 from "./ESL/Components/Navbar2";
-import Section from "./ESL/Components/Section";
-import Equipes from "./ESL/Components/Equipes";
+import ContactForm from "./Components/ContactForm";
+import Testimonials from "./Components/Testimonials";
+import Footer from "./Components/Footer";
+import Navbar2 from "./Components/Navbar2";
+import Section from "./Components/Section";
+import Equipes from "./Components/Equipes";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, BrowserRouter as Router, Navigate } from "react-router-dom";  // Use BrowserRouter here
 
-import ProjectManagement from "./ESL/Components/ProjectManagement";
-import Faq from "./ESL/Components/Faq";
-import BoiteMessage from "./ESL/Components/BoiteMessage";
-import Guide from "./ESL/Components/Guide";
+import ProjectManagement from "./Components/ProjectManagement";
+import Faq from "./Components/Faq";
+import BoiteMessage from "./Components/BoiteMessage";
+import Guide from "./Components/Guide";
 
 function App() {
   const [activeComponent, setActiveComponent] = React.useState(null);

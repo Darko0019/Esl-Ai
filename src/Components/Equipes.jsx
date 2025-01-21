@@ -7,25 +7,25 @@ const Equipes = () => {
     {
       name: 'Equipe 1',
       members: [
-        { nom: 'Alice', prenom: 'Doe', personnalite: 'Leader' },
-        { nom: 'Bob', prenom: 'Smith', personnalite: 'Creative' },
-        { nom: 'Charlie', prenom: 'Brown', personnalite: 'Analytical' },
+        { nom: 'Alami', prenom: 'Kamal', personnalite: 'Leader' },
+        { nom: 'Rami', prenom: 'Zaid', personnalite: 'Creative' },
+        { nom: 'Jamal', prenom: 'Marwan', personnalite: 'Analytical' },
       ],
     },
     {
       name: 'Equipe 2',
       members: [
-        { nom: 'David', prenom: 'Johnson', personnalite: 'Innovative' },
-        { nom: 'Eve', prenom: 'Williams', personnalite: 'Organized' },
-        { nom: 'Frank', prenom: 'Miller', personnalite: 'Dynamic' },
+        { nom: 'Moutawakil', prenom: 'Abdelatif', personnalite: 'Innovative' },
+        { nom: 'Lamin', prenom: 'Mostafa', personnalite: 'Organized' },
+        { nom: 'Farah', prenom: 'Amina', personnalite: 'Dynamic' },
       ],
     },
     {
       name: 'Equipe 3',
       members: [
-        { nom: 'Grace', prenom: 'Lee', personnalite: 'Visionary' },
-        { nom: 'Heidi', prenom: 'Taylor', personnalite: 'Empathetic' },
-        { nom: 'Ivan', prenom: 'Anderson', personnalite: 'Pragmatic' },
+        { nom: 'Farouk', prenom: 'Faisal', personnalite: 'Visionary' },
+        { nom: 'Rachid', prenom: 'Hasan', personnalite: 'Empathetic' },
+        { nom: 'Ali', prenom: 'Mona', personnalite: 'Pragmatic' },
       ],
     },
   ]);
