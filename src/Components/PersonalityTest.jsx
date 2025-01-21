@@ -10,12 +10,12 @@ const PersonalityTest = () => {
     <div className="test-cont">
       <h1>Test de Personnalité</h1>
       <iframe
-        src="https://www.16personalities.com/fr/test-de-personnalite"
+        src="http://localhost:5000/proxy"
         title="Test de personnalité"
         className="test"
       ></iframe>
 
-      <div className="requestly-cont">
+      {/* <div className="requestly-cont">
         <h1>Si la page de test ne fonctionne pas, suivez ces étapes :</h1>
         <div className="requestly-guide">
           <img className="guide-images" src={ Requestly1Img } alt="Requestly1" />
@@ -33,7 +33,7 @@ const PersonalityTest = () => {
           <img className="guide-images" src={ Requestly4Img } alt="Requestly4" />
           <p className="guide-text">Appuyez sur Ctrl + S pour enregistrer et copiez-collez ce lien : "https://www.16personalities.com/fr/test-de-personnalite" dans le champ Test, puis cliquez sur Tester la règle.</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
