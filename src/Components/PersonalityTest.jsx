@@ -1,9 +1,9 @@
 import React from "react";
 import '../Styles/PersonalityTest.css';
-import Requestly1Img from '../Images/Requestly1.jpg';
-import Requestly2Img from '../Images/Requestly2.jpg';
-import Requestly3Img from '../Images/Requestly3.jpg';
-import Requestly4Img from '../Images/Requestly4.jpg';
+// import Requestly1Img from '../Images/Requestly1.jpg';
+// import Requestly2Img from '../Images/Requestly2.jpg';
+// import Requestly3Img from '../Images/Requestly3.jpg';
+// import Requestly4Img from '../Images/Requestly4.jpg';
 
 const PersonalityTest = () => {
   return (
