@@ -1,25 +1,21 @@
 {
   "files": {
     "main.css": "/Esl-Ai/static/css/main.ba5d3062.css",
-    "main.js": "/Esl-Ai/static/js/main.935651be.js",
+    "main.js": "/Esl-Ai/static/js/main.a196de72.js",
     "static/media/Logo.png": "/Esl-Ai/static/media/Logo.fb1dee027cebf51071f7.png",
-    "static/media/Requestly3.jpg": "/Esl-Ai/static/media/Requestly3.8fa28672b6c2637e600b.jpg",
     "static/media/Contact.png": "/Esl-Ai/static/media/Contact.e015e36c1032805d268b.png",
-    "static/media/Requestly4.jpg": "/Esl-Ai/static/media/Requestly4.f5938ad8d936844887a4.jpg",
     "static/media/Contact_Guide.png": "/Esl-Ai/static/media/Contact_Guide.47dda390cf9d9805ad17.png",
-    "static/media/Requestly2.jpg": "/Esl-Ai/static/media/Requestly2.494bd8a32a3fb793fb5f.jpg",
     "static/media/HomeBg.png": "/Esl-Ai/static/media/HomeBg.4bbeb55ed11902e4f3bd.png",
-    "static/media/Requestly1.jpg": "/Esl-Ai/static/media/Requestly1.dffcb9443e358dd2a8d1.jpg",
     "static/media/Profile.png": "/Esl-Ai/static/media/Profile.9c84af1acda46ffc237c.png",
     "static/media/Feedback_Guide.png": "/Esl-Ai/static/media/Feedback_Guide.84cca29831b5941dfcbf.png",
     "static/media/Projects_Guide.png": "/Esl-Ai/static/media/Projects_Guide.585dc5781939db6fd42b.png",
     "static/media/Add_Member_Guide.png": "/Esl-Ai/static/media/Add_Member_Guide.bbf979093f178770a360.png",
     "index.html": "/Esl-Ai/index.html",
     "main.ba5d3062.css.map": "/Esl-Ai/static/css/main.ba5d3062.css.map",
-    "main.935651be.js.map": "/Esl-Ai/static/js/main.935651be.js.map"
+    "main.a196de72.js.map": "/Esl-Ai/static/js/main.a196de72.js.map"
   },
   "entrypoints": [
     "static/css/main.ba5d3062.css",
-    "static/js/main.935651be.js"
+    "static/js/main.a196de72.js"
   ]
 }
