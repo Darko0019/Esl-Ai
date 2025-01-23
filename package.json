@@ -2,7 +2,7 @@
   "homepage": "https://darko0019.github.io/Esl-Ai/",
   "name": "projects",
   "version": "0.1.0",
-  "proxy": "https://render.com/docs/web-services#port-binding",
+  "proxy": "https://esl-ai.onrender.com",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
