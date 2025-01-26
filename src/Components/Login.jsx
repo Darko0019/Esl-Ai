@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../Styles/Login.css'
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -26,26 +27,30 @@ function Login({ onLogin }) {
       alert("Nom d'utilisateur ou mot de passe incorrect !");
     }
   };
-
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Nom d'utilisateur"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Mot de passe"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">Se connecter</button>
-    </form>
+    <div className="login-form">
+      <h2>Connexion</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Nom d'utilisateur"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Mot de passe"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Se connecter</button>
+      </form>
+      <a href="#">Mot de passe oublié ?</a>
+    </div>
   );
+  
 }
 
 export default Login;

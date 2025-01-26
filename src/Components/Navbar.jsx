@@ -77,13 +77,13 @@ const Navbar = () => {
             {role === 'prof' && (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/services">Services</Link>
+                  <Link className="nav-link" to="/ServicesSection">Services</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/equipes">Equipes</Link>
+                  <Link className="nav-link" to="/Equipes">Equipes</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/project">Project</Link>
+                  <Link className="nav-link" to="/projectManagement">Project</Link>
                 </li>
               </>
             )}
@@ -92,13 +92,16 @@ const Navbar = () => {
                 <li className="nav-item">
                   <Link className="nav-link" to="/PersonalityTest">Test Personality</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/Form">Envoi du Test</Link>
+                </li>
               </>
             )}
             <li className="nav-item">
               <Link className="nav-link" to="/testimonials">Testimonials</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link" to="/ContactForm">Contact</Link>
             </li>
           </ul>
         </div>

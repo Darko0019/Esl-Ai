@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PersonalityTest from './PersonalityTest'; // Importation du composant de test
 import '../Styles/AddMemberForm.css';
 
-const AddMemberForm = ({ onAddMember, onClose }) => {
+const Form = ({ onAddMember, onClose }) => {
   const [newMember, setNewMember] = useState({
     nom: '',
     prenom: '',
@@ -79,14 +79,14 @@ const AddMemberForm = ({ onAddMember, onClose }) => {
             <option value="ESTP">ESTP - Entrepreneur</option>
             <option value="ESFP">ESFP - Artiste</option>
           </select>
-          {/* <p className='lienTest'>Vous ne savez pas?
+          <p className='lienTest'>Vous ne savez pas?
           <a
               className="test-button"
               onClick={handleShowPersonalityTest}
               >
               Tester la Personnalité
             </a>
-            </p> */}
+            </p>
           <div className="form-actions">
             <button type="submit" className="submit-button">
               Ajouter
@@ -102,4 +102,4 @@ const AddMemberForm = ({ onAddMember, onClose }) => {
   );
 };
 
-export default AddMemberForm;
+export default Form;
