@@ -10,7 +10,7 @@ const PersonalityTest = () => {
     <div className="test-cont">
       <h1>Test de Personnalité</h1>
       <iframe
-        src="https://esl-ai.onrender.com/proxy"
+        src="https://esl-ai.onrender.com/proxy/iframeProxy"
         title="Test de personnalité"
         className="test"
       ></iframe>

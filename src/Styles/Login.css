@@ -1,0 +1,124 @@
+.logo {
+    width: 120px;
+    margin: 20px auto;
+    display: block;
+    transition: all 0.3s;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: auto;
+    font-size: 18px;
+  }
+  
+  .form-container {
+    position: relative;
+    margin-bottom: 70px;
+    transform: scale(0.75, 0.75);
+  }
+  
+  .login-form, .signup-form {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 30px;
+    border-radius: 40px;
+    width: 800px;
+    border: 2px solid #088ADB;
+    z-index: 1;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-form label, .signup-form label {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 10px 0;
+    align-self: flex-start; /* Align labels to the start */
+  }
+  
+  input {
+    border: 1px solid #088ADB;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    margin-bottom: 20px !important;
+    width: 80%;
+    background-color: transparent;
+  }
+  
+  input::placeholder {
+    color: #b7c3ca;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #ffffff;
+  }
+  
+  .radio-group {
+    display: flex; /* Aligns radio buttons in one row */
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+  }
+  
+  .radio-group label {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .submit {
+    background-color: transparent;
+    color: #088ADB;
+    border: #088ADB 1px solid;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 25%;
+    margin: 20px 0px;
+    font-size: 24px;
+  }
+  
+  .submit:hover {
+    background-color: #088ADB;
+    color: #0a0e1a;
+    font-weight: 500;
+  }
+  
+  .toggle {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+  }
+  
+  .toggle span {
+    color: #088ADB;
+    cursor: pointer;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #088ADB;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    color: #ffffff;
+  }
