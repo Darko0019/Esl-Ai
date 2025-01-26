@@ -47,6 +47,7 @@
 // export default Navbar;
 import React from 'react';
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Logo from "../Images/Logo.png";
 
 const Navbar = () => {

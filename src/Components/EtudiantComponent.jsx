@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from './Navbar'; // Assurez-vous que le chemin est correct
+import Navbar2 from './Navbar'; // Assurez-vous que le chemin est correct
+import "../Styles/Navbar2.css"
 
 function EtudiantComponent() {
   const [role, setRole] = useState(null);
@@ -16,7 +17,7 @@ function EtudiantComponent() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar2 />
       <h1>Bienvenue, Étudiant !</h1>
       {/* Ajoutez ici le contenu spécifique pour l'étudiant */}
     </div>
