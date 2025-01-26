@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import Login from "./Components/Login";
 import ProfComponent from "./Components/ProfComponent";
 import EtudiantComponent from "./Components/EtudiantComponent";
@@ -28,11 +29,13 @@ function App() {
   }
 
   return (
-    <div>
-      <button onClick={handleLogout}>Se déconnecter</button>
-      {role === "prof" && <ProfComponent />}
-      {role === "etudiant" && <EtudiantComponent />}
-    </div>
+    <Router>
+      <div>
+        <button onClick={handleLogout}>Se déconnecter</button>
+        {role === "prof" && <ProfComponent />}
+        {role === "etudiant" && <EtudiantComponent />}
+      </div>
+    </Router>
   );
 }
 
