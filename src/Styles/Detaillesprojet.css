@@ -5,7 +5,7 @@
     justify-content: center;
     min-height: 120vh;
   }
-  .content {
+  .project-details {
     text-align: center;
     padding: 40px 20px;
   }
@@ -94,3 +94,8 @@
   .team-badge:hover {
     filter: brightness(0.8);
   }
+
+.boite {
+  margin: auto;
+  flex: 1;
+}

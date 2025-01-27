@@ -1,12 +1,10 @@
 .generated-section {
     position: relative;
-    margin-top: 100px;
     padding: 30px;
-    width: 800px;
+    width: 1150px;
     height: 700px;
     left: 50%;
     transform: translateX(-50%);
-    border: 2px solid #088ADB;
     border-radius: 40px;
     background-color: transparent;
     display: flex;
@@ -16,29 +14,35 @@
 .generated-box {
     border: 2px solid #088ADB;
     border-radius: 40px;
-    width: 90%; /* Adaptive sizing */
-    height: 80%;
-    font-size: 16px;
+    width: 100%; /* Adaptive sizing */
+    height: 90%;
+    font-size: 14px;
     background: transparent; /* Transparent background */
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    /* justify-content: flex-end; */
+    /* align-items: center; */
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .generated-box h1 {
-    position: absolute;
     top: 15%;
 }
 
 .input-cont {
-    position: relative; /* Changed to relative for positioning children */
-    width: 90%; /* Full width */
-    height: 60px; /* Fixed height */
-    display: flex; /* Use flexbox for alignment */
+    /* position: absolute;  */
+    width: 100%; 
+    height: 60px; 
+    display: flex; 
     align-items: center;
+    align-self: center;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .message-input {
@@ -47,11 +51,12 @@
     background: rgba(29, 63, 102, 0.2); /* Transparent input background */
     border-radius: 20px;
     font-size: 16px;
+    display: flex;
 }
 
 .send-btn {
     position: absolute; /* Absolute positioning within input-cont */
-    right: 10px; /* Right alignment */
+    right: 20px; /* Right alignment */
     width: 40px; /* Adjusted width for a better fit */
     height: 40px; /* Adjusted height for a better fit */
     border: none;
@@ -61,7 +66,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-bottom: 2%;
+    margin-bottom: 2.5%;
 }
 
 .send-icon:hover {
@@ -81,3 +86,60 @@
     font-size: 20px; /* Size of the icon */
     transition: all 0.2s;
 }
+
+.messages-container {
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 30px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+    max-width: 60%;
+    width: 60%;
+    position: relative;
+    height: fit-content;
+    text-align: left;
+    word-wrap: break-word; /* Ensure long words break to the next line */
+  white-space: normal; /* Allow text to wrap normally */
+  max-width: 100%; /* Ensure the message doesn't exceed the container width */
+  }
+  
+  .user-message {
+    background-color: transparent;
+    color: rgb(219, 226, 237);
+    align-self: flex-end;
+    border: 1px solid #088ADB;
+  }
+  
+  .platform-message {
+    background-color: transparent;
+    color: rgb(219, 226, 237);
+    
+    background-color: #131828;
+  }
+
+  .messages-container::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+  
+  .messages-container::-webkit-scrollbar-thumb {
+    background-color: #177dbd; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+  }
+  
+  .messages-container::-webkit-scrollbar-track {
+    background-color: #e0e0e0; /* Background color for the track */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .messages-container::-webkit-scrollbar-button {
+    display: none; /* Remove arrows */
+  }

@@ -10,8 +10,8 @@ function Login({ onLogin }) {
 
     // Simuler une base de données locale
     const users = [
-      { username: "prof1", password: "pass123", role: "prof" },
-      { username: "etu1", password: "test456", role: "etudiant" },
+      { username: "prof1", password: "testProf", role: "prof" },
+      { username: "etu1", password: "testEtu", role: "etudiant" },
     ];
 
     // Vérifier les informations de connexion
