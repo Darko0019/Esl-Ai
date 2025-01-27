@@ -13,13 +13,12 @@ import Form from "./Components/Form";
 import Footer from "./Components/Footer";
 import Faq from "./Components/Faq";
 import Guide from "./Components/Guide";
-import "./App.css"; // Ensure App.css is imported
+import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [role, setRole] = useState("");
 
-  // Check if a role is already stored (persist session)
   useEffect(() => {
     const savedRole = localStorage.getItem("role");
     if (savedRole) {
@@ -29,7 +28,7 @@ function App() {
 
   const handleLogin = (role) => {
     setRole(role);
-    localStorage.setItem("role", role); // Persist role to maintain session
+    localStorage.setItem("role", role);
   };
 
   const handleLogout = () => {
@@ -41,7 +40,6 @@ function App() {
     return <Login onLogin={handleLogin} />;
   }
 
-  // Define role-based routes
   const renderRoutesForRole = () => {
     if (role === "prof") {
       return (

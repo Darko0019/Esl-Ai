@@ -14,7 +14,7 @@ const Section = () => {
           Découvrez une nouvelle façon d'apprendre et développez vos compétences grâce à nos outils en ligne innovants.
         </p>
 
-        <Link to="/services" className="hero-button">
+        <Link to="/ServicesSection" className="hero-button">
           Découvrez nos services
         </Link>
       </div>
