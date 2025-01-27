@@ -47,7 +47,7 @@ function Login({ onLogin }) {
         />
         <button type="submit">Se connecter</button>
       </form>
-      <a href="#">Mot de passe oublié ?</a>
+      <a href="#passwordForgotten">Mot de passe oublié ?</a>
     </div>
   );
   
