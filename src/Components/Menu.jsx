@@ -29,7 +29,7 @@ const Menu = ({ isOpen, closeMenu }) => {
       {isOpen && <div className="menu-backdrop" onClick={handleOverlayClick}></div>}
       <div className={`menu-overlay ${isOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={closeMenu}>
-         <i class="fi fi-rr-cross-small"></i>
+         <i className="fi fi-rr-cross-small"></i>
         </button>
 
         <img src={ Profile } alt="Profile" id='profile'/>
@@ -41,7 +41,7 @@ const Menu = ({ isOpen, closeMenu }) => {
         <ul className="menu-list">
           			<li>
 						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g clip-path="url(#clip0_884_2384)">
+						<g clipPath="url(#clip0_884_2384)">
 						<path d="M2.99375 20.0763C1.90625 20.2063 0.87375 20.6225 0 21.2812V6.25C0 3.28 2.09 0.71875 5 0.125V20H3.75C3.49625 20 3.2425 20.025 2.99375 20.0763ZM22.5 12.5C23.365 12.5 24.1987 12.6212 25 12.8287V6.25C25 2.79875 22.2013 0 18.75 0H7.5V20H12.8287C13.9437 15.6938 17.85 12.5 22.5 12.5ZM12.5 22.5H3.75C1.67875 22.5 0 24.1788 0 26.25C0 28.3212 1.67875 30 3.75 30H15.9075C13.8237 28.1663 12.5 25.4875 12.5 22.5ZM30 22.5C30 26.6425 26.6425 30 22.5 30C18.3575 30 15 26.6425 15 22.5C15 18.3575 18.3575 15 22.5 15C26.6425 15 30 18.3575 30 22.5ZM23.75 23.75C23.75 23.06 23.19 22.5 22.5 22.5C21.81 22.5 21.25 23.06 21.25 23.75V26.25C21.25 26.94 21.81 27.5 22.5 27.5C23.19 27.5 23.75 26.94 23.75 26.25V23.75ZM24.375 19.375C24.375 18.34 23.535 17.5 22.5 17.5C21.465 17.5 20.625 18.34 20.625 19.375C20.625 20.41 21.465 21.25 22.5 21.25C23.535 21.25 24.375 20.41 24.375 19.375Z" fill="#088ADB"/></g>
 						</svg>
 						<Link to="/Guide">
