@@ -1,18 +1,16 @@
 const express = require("express");
 const axios = require("axios");
-// const authRoutes = require("../routes/auth");
 const cors = require("cors");
 
 const app = express();
-
-// CORS configuration to allow requests from the React app's URL
+L
 const corsOptions = {
-  origin: 'https://esl-ai.onrender.com',  // Replace with your React app's URL on Render
+  origin: 'https://esl-ai.onrender.com',
   methods: "GET, POST, PUT, DELETE",
   allowedHeaders: "Content-Type, Authorization",
 };
 
-app.use(cors(corsOptions));  // Enable CORS
+app.use(cors(corsOptions)); 
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -21,9 +19,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use("/auth", authRoutes);
-
-// Route for proxying requests to 16Personalities website
 app.get("/proxy", async (req, res) => {
   try {
     const response = await axios.get("https://www.16personalities.com/fr/test-de-personnalite");
@@ -34,7 +29,6 @@ app.get("/proxy", async (req, res) => {
   }
 });
 
-// Use Render's dynamic port
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Proxy server running on http://localhost:${port}`);

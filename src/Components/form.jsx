@@ -89,7 +89,7 @@ const Form = ({ onAddMember, onClose }) => {
             </p>
           <div className="form-actions">
             <button type="submit" className="submit-button">
-              Ajouter
+              Envoyer
             </button>
             <button type="button" className="close-button" onClick={onClose}>
               Fermer
