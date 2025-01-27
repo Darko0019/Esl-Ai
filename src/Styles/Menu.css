@@ -91,7 +91,7 @@
     transition: all 0.2s;
   }  
 
-.login {
+.logout {
     position: relative;
     display: block;
     left: 50%;
@@ -105,7 +105,15 @@
     font-weight: 600;
 }
 
-.login:hover {
+a{
+  text-decoration: none;
+}
+
+a .logout:hover {
+  color: #08111C;
+}
+
+.logout:hover {
     background-color: #088ADB;
     color: #08111C;
     font-weight: 600;

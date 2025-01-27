@@ -1,13 +1,13 @@
 const express = require("express");
 const axios = require("axios");
-// const authRoutes = require("../routes/auth");
+const authRoutes = require("../routes/auth");
 const cors = require("cors");
 
 const app = express();
 
 // CORS configuration to allow requests from the React app's URL
 const corsOptions = {
-  origin: 'https://esl-ai.onrender.com',  // Replace with your React app's URL on Render
+  origin: 'https://your-react-app-url.onrender.com',  // Replace with your React app's URL on Render
   methods: "GET, POST, PUT, DELETE",
   allowedHeaders: "Content-Type, Authorization",
 };
@@ -21,7 +21,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use("/auth", authRoutes);
+app.use("/auth", authRoutes);
 
 // Route for proxying requests to 16Personalities website
 app.get("/proxy", async (req, res) => {
