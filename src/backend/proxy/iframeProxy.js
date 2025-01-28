@@ -18,10 +18,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-// Rewrite URLs dynamically
+// Rewrite URLs in HTML/CSS/JS
 const rewriteUrls = (html, baseUrl) => {
   return html.replace(/(src|href)="(.*?)"/g, (match, attr, link) => {
-    // If the link is relative, rewrite it to pass through the proxy
     const absoluteUrl = new URL(link, baseUrl).toString();
     return `${attr}="/proxy?url=${encodeURIComponent(absoluteUrl)}"`;
   });
@@ -32,26 +31,39 @@ app.get("/proxy", async (req, res) => {
   const targetUrl = req.query.url || "https://www.16personalities.com/fr/test-de-personnalite";
 
   try {
-    // Fetch the requested page
     const response = await axios.get(targetUrl, {
       headers: {
-        // Mimic a real browser to bypass bot protection
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
         Referer: "https://www.16personalities.com/",
         Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
       },
+      responseType: "arraybuffer", // Ensures we can handle binary responses (like CSS, fonts, etc.)
     });
 
-    // Rewrite URLs in the HTML
-    const rewrittenHtml = rewriteUrls(response.data, targetUrl);
-
-    // Send the modified HTML
-    res.send(rewrittenHtml);
+    // Get content type to detect if it's HTML
+    const contentType = response.headers["content-type"];
+    if (contentType && contentType.includes("text/html")) {
+      // Rewrite URLs if it's HTML
+      const html = response.data.toString("utf-8");
+      const rewrittenHtml = rewriteUrls(html, targetUrl);
+      res.send(rewrittenHtml);
+    } else {
+      // For other content types (CSS, JS, images, etc.), forward directly
+      res.set(response.headers);
+      res.send(response.data);
+    }
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching data:", error.message);
     res.status(500).send("Error occurred while fetching data");
   }
+});
+
+// Modify headers to avoid iframe restrictions
+app.use((req, res, next) => {
+  res.setHeader("X-Frame-Options", "ALLOWALL"); // Remove iframe restrictions
+  res.setHeader("Content-Security-Policy", ""); // Disable CSP
+  next();
 });
 
 // Server setup
