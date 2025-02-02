@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useLocation, HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./Components/Login";
 import Navbar2 from "./Components/Navbar2";
 import ServicesSection from "./Components/ServicesSection";
@@ -35,6 +35,9 @@ function App() {
     localStorage.removeItem("role");
     setRole(null);
   };
+
+  const location = useLocation();
+  const showNavAndFooter = location.pathname !== "/login";
 
   if (!role) {
     return <Login onLogin={handleLogin} />;
@@ -76,15 +79,19 @@ function App() {
   };
 
   return (
-    <Router>
-      <div className="app">
-        <Navbar2 role={role} />
-        <main className="content">
-          <Routes>{renderRoutesForRole()}</Routes>
-        </main>
-        <Footer /> {/* Re-added Footer component */}
-      </div>
-    </Router>
+    <>
+      {showNavAndFooter && <Navbar2 />}
+        <Router>
+          <div className="app">
+            <Navbar2 role={role} />
+            <main className="content">
+              <Routes>{renderRoutesForRole()}</Routes>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      {showNavAndFooter && <Footer />}
+    </>
   );
 }
 
