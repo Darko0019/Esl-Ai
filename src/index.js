@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <React.StrictMode>
-    <Router>
+    <Router basename='/Esl-Ai'>
       <App/>
     </Router>
   </React.StrictMode>
