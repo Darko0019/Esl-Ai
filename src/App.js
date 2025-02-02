@@ -79,19 +79,15 @@ function App() {
   };
 
   return (
-    <>
-      {showNavAndFooter && <Navbar2 />}
         <Router>
           <div className="app">
-            <Navbar2 role={role} />
+            { showNavAndFooter && <Navbar2 role={role} />}
             <main className="content">
               <Routes>{renderRoutesForRole()}</Routes>
             </main>
-            <Footer />
+            {showNavAndFooter && <Footer />}
           </div>
         </Router>
-      {showNavAndFooter && <Footer />}
-    </>
   );
 }
 
